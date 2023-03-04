@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get("/users", {:controller => "users", :action => "list_users"})
   get("/", {:controller => "users", :action => "list_users"})
+  get("/users/:an_id", {:controller => "users", :action => "show"})
+  
   
 
   # CREATE

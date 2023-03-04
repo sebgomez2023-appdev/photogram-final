@@ -10,4 +10,5 @@
 #  photo_id   :integer
 #
 class Comment < ApplicationRecord
+  belongs_to :user , :required => true
 end
