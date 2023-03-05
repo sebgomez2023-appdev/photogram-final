@@ -35,8 +35,10 @@
       <li>
         <a href = "/user_sign_out">Sign out</a>
       </li>
+        <%user_id = session.fetch(:user_id)%>
+        <%username = User.where({ :id => user_id }).first.username%>
       <li>
-        <%session.fetch(:user_id)%>
+        <a href="/edit_user_profile" ><%=username%></a>
       </li>
       <%end%>
      

@@ -33,11 +33,14 @@
             No  
           <%end%>
         </td>
-
+        <%if session.fetch(:user_id) != nil%>
         <td>
-          Follow 
+          <button>Follow</button>
         </td>
-
+        <%else%>
+        <td>
+        </td>
+        <%end%>
         <td>
         <%if a_user.private == false%>
           <a href="/users/<%= a_user.username %>">
